@@ -218,7 +218,7 @@ void routeA() {
     printf("Your leg is injured and begins bleeding.\n");
     printf("The paralysis poison makes your leg weak\n");
     printf("and difficult to move.\n\n");
-
+    printf("\033[0m");
     printf("You continue moving deeper into the dungeon.\n\n");
 
     printf("You feel like something is following you.\n\n");
@@ -234,7 +234,9 @@ void routeA() {
     printf("The footsteps stop too.\n\n");
 
     printf("Maybe you are imagining things.\n\n");
-
+    pauseGame();
+    
+    clearScreen();
     printf("You keep moving.\n\n");
 
     printf("A quiet laugh comes from behind you.\n\n");
@@ -258,7 +260,7 @@ void choice3A() {
 
     char choice;
 
-    redScreen();
+    clearScreen();
 
     printf("You begin moving again.\n\n");
 
@@ -272,7 +274,7 @@ void choice3A() {
 
     if (choice == 'A' || choice == 'a') {
 
-        redScreen();
+        clearScreen();
 
         printf("You stop and stand guard.\n\n");
 
@@ -290,11 +292,11 @@ void choice3A() {
         clearScreen();
 
         printf("You keep moving forward.\n\n");
-
+        redScreen();
         printf("Suddenly, the goblin lunges at you!\n\n");
 
         printf("You are too weak to defend yourself.\n");
-
+        printf("\033[0m\n");
         deathEnding();
     }
 
@@ -317,8 +319,8 @@ void choice4A() {
     redScreen();
 
     printf("You continue moving while still bleeding.\n\n");
-
-    printf("The goblin mutters something behind you.\n\n");
+    printf("\033[0m");
+    printf("The goblin giggles behind.\n\n");
 
     printf("Your leg becomes weaker because of the poison.\n\n");
 
@@ -335,11 +337,11 @@ void choice4A() {
         clearScreen();
 
         printf("You decide to stand your ground.\n\n");
-
+        redScreen();
         printf("But your legs suddenly collapse.\n\n");
 
         printf("The goblin takes the opportunity to attack.\n");
-
+        printf("\033[0m\n");
         deathEnding();
     }
 
@@ -352,7 +354,7 @@ void choice4A() {
         printf("Your leg becomes even weaker.\n");
 
         printf("You stumble and fall.\n\n");
-
+        printf("\033[0m");
         pauseGame();
 
         choice5A();
@@ -381,17 +383,17 @@ void choice5A() {
     printf("A. Stand Up Again\n");
     printf("B. Play Dead\n\n");
 
-    printf("Choice: ");
+    printf("Choice: \n");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
 
-        clearScreen();
+        redScreen();
 
         printf("You force yourself to stand up.\n\n");
 
         printf("The goblin immediately attacks.\n");
-
+        printf("\033[0m\n");
         deathEnding();
     }
 
@@ -451,10 +453,11 @@ void choice6A() {
         clearScreen();
 
         printf("You suddenly attack the goblin!\n\n");
-
+        
+        redScreen();
         printf("The goblin quickly evades your attack.\n");
         printf("It counters before you can react.\n\n");
-
+        printf("\033[0m\n");
         deathEnding();
     }
 
@@ -482,6 +485,7 @@ void choice7A() {
     printf("B. Grab the Goblin\n\n");
 
     printf("Choice: ");
+    printf("\033[0m");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
@@ -489,11 +493,14 @@ void choice7A() {
         clearScreen();
 
         printf("You remain completely still.\n\n");
+        
+        redScreen();
+        printf("You were stabbed.\n\n");
 
-        printf("The goblin realizes what you are doing.\n\n");
+        printf("The goblin is too close.\n\n");
 
-        printf("You are too weak to continue.\n");
-
+        printf("You are too weak to react.\n");
+        printf("\033[0m\n");
         deathEnding();
     }
 
@@ -511,7 +518,7 @@ void choice7A() {
 
         printf("You are still bleeding.\n");
         printf("Your leg is still badly weakened by the poison.\n\n");
-
+        printf("\033[0m");
         pauseGame();
 
         choice8A();
@@ -533,7 +540,7 @@ void choice8A() {
 
     char choice;
 
-    redScreen();
+    clearScreen();
 
     printf("You continue deeper into the dungeon.\n\n");
 
@@ -557,7 +564,7 @@ void choice8A() {
     printf("A. Take the bright right path\n");
     printf("B. Take the left path where you hear sounds\n\n");
 
-    printf("Choice: ");
+    printf("Choice: \n");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
@@ -780,7 +787,7 @@ void deathEnding() {
     printf("\n\n============================================\n");
     printf("                YOU DIED                    \n");
     printf("============================================\n\n");
-    
+    printf("\033[0m");
     printf("Your adventure has come to an end.\n");
 
     restartGame();
@@ -796,6 +803,7 @@ void falseEscapeEnding() {
     printf("\n============================================\n");
     printf("             FALSE ESCAPE\n");
     printf("============================================\n\n");
+    printf("\033[0m");
 
     printf("You follow the bright path.\n\n");
 
@@ -994,34 +1002,22 @@ void clearScreen() {
     system("clear");
 #endif
 
+    /* Reset terminal to normal */
     printf("\033[0m");
 }
 
 
-/* ===== DARK RED SCREEN ===== */
-
+/* Temporary dark-red screen */
 void redScreen() {
 
 #ifdef _WIN32
-
     system("cls");
-
-    /*
-       Dark red background with white text.
-       ANSI support may depend on the terminal.
-    */
-
-    printf("\033[48;2;80;0;0m");
-    printf("\033[97m");
-
 #else
-
     system("clear");
+#endif
 
     printf("\033[48;2;80;0;0m");
     printf("\033[97m");
-
-#endif
 }
 
 
