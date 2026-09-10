@@ -1,0 +1,1040 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* ===== FUNCTION DECLARATIONS ===== */
+
+void introduction();
+void choice1();
+void choice2();
+
+void routeA();
+void choice3A();
+void choice4A();
+void choice5A();
+void choice6A();
+void choice7A();
+void choice8A();
+
+void routeB();
+void choice3B();
+void choice4B();
+
+void deathEnding();
+void falseEscapeEnding();
+void struggleEnding();
+void escapeEnding();
+void betrayalEnding();
+void idiotEnding();
+void revengeEnding();
+
+void restartGame();
+void pauseGame();
+void clearScreen();
+void redScreen();
+void normalScreen();
+int betrayalUnlocked = 0;
+
+/* ===== MAIN ===== */
+
+int main() {
+
+    int playAgain = 1;
+    char answer;
+
+    while (playAgain) {
+
+        introduction();
+        choice1();
+
+        printf("\n\nPlay again? (Y/N): ");
+        scanf(" %c", &answer);
+
+        if (answer == 'Y' || answer == 'y') {
+            clearScreen();
+        }
+        else {
+            playAgain = 0;
+        }
+    }
+
+    printf("\nThank you for playing Fantasy Quest Adventure!\n");
+
+    return 0;
+}
+
+
+/* ===== INTRODUCTION ===== */
+
+void introduction() {
+
+    clearScreen();
+
+    printf("============================================\n");
+    printf("          FANTASY QUEST ADVENTURE\n");
+    printf("============================================\n\n");
+
+    printf("You are a beginner adventurer.\n\n");
+
+    printf("While exploring a cave, you discover a\n");
+    printf("mysterious portal hidden deep inside.\n\n");
+
+    printf("Curious about what lies beyond it, you\n");
+    printf("step through the portal...\n\n");
+
+    printf("You suddenly find yourself inside a dark\n");
+    printf("dungeon inhabited by goblins.\n\n");
+
+    printf("Your adventure begins.\n");
+
+    pauseGame();
+}
+
+
+/* ===== CHOICE 1 ===== */
+
+void choice1() {
+
+    char choice;
+
+    clearScreen();
+
+    printf("You explore the dungeon deeper.\n\n");
+
+    printf("Eventually, the path splits into two.\n\n");
+
+    printf("A. Take the left path\n");
+    printf("B. Take the right path\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        clearScreen();
+
+        printf("You take the left path.\n\n");
+        printf("You suddenly realize that you have entered\n");
+        printf("a goblin nest.\n\n");
+
+        printf("The goblins surround you.\n");
+        printf("There are too many of them.\n\n");
+
+        deathEnding();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        clearScreen();
+
+        printf("You take the right path.\n\n");
+
+        printf("A single goblin suddenly appears!\n\n");
+
+        printf("You quickly defeat it.\n\n");
+
+        printf("You continue deeper into the dungeon...\n");
+
+        pauseGame();
+
+        choice2();
+    }
+
+    else {
+
+        printf("\nInvalid choice. Please choose A or B.\n");
+        pauseGame();
+
+        choice1();
+    }
+}
+
+
+/* ===== CHOICE 2 ===== */
+
+void choice2() {
+
+    char choice;
+
+    clearScreen();
+
+    printf("You continue deeper into the dungeon.\n\n");
+
+    printf("The light crystals on the walls become\n");
+    printf("fewer and fewer.\n\n");
+
+    printf("The dungeon is becoming darker.\n\n");
+
+    printf("A. Continue forward despite the darkness\n");
+    printf("B. Search for another source of light\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        routeA();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        routeB();
+    }
+
+    else {
+
+        printf("\nInvalid choice. Please choose A or B.\n");
+        pauseGame();
+
+        choice2();
+    }
+}
+
+
+/* ================================================= */
+/*                  ROUTE A                           */
+/*                 DARK ROUTE                        */
+/* ================================================= */
+
+void routeA() {
+
+    normalScreen();
+
+    printf("============================================\n");
+    printf("              ROUTE A: DARK ROUTE           \n");
+    printf("============================================\n\n");
+
+    printf("You decide to continue despite the darkness.\n\n");
+
+    printf("You walk deeper into the dungeon.\n\n");
+
+    printf("Suddenly...\n\n");
+    
+    pauseGame();
+    
+    redScreen();
+    
+    printf("You step on a poisoned spike trap!\n\n");
+
+    printf("Your leg is injured and begins bleeding.\n");
+    printf("The paralysis poison makes your leg weak\n");
+    printf("and difficult to move.\n\n");
+
+    printf("You continue moving deeper into the dungeon.\n\n");
+
+    printf("You feel like something is following you.\n\n");
+
+    printf("You look behind you...\n");
+    printf("Nothing.\n\n");
+
+    printf("You continue walking.\n\n");
+
+    printf("Then you hear footsteps behind you.\n\n");
+
+    printf("You stop.\n");
+    printf("The footsteps stop too.\n\n");
+
+    printf("Maybe you are imagining things.\n\n");
+
+    printf("You keep moving.\n\n");
+
+    printf("A quiet laugh comes from behind you.\n\n");
+
+    printf("You turn around.\n\n");
+
+    printf("A goblin is standing in the darkness.\n");
+    printf("It keeps its distance from you.\n\n");
+
+    printf("It seems to be waiting for you to become weaker.\n");
+
+    pauseGame();
+
+    choice3A();
+}
+
+
+/* ===== CHOICE 3A ===== */
+
+void choice3A() {
+
+    char choice;
+
+    redScreen();
+
+    printf("You begin moving again.\n\n");
+
+    printf("The goblin's footsteps slowly get closer.\n\n");
+
+    printf("A. Stand Guard\n");
+    printf("B. Keep Moving Forward\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        redScreen();
+
+        printf("You stop and stand guard.\n\n");
+
+        printf("You hear the goblin laugh.\n\n");
+
+        printf("It is no longer trying to hide itself.\n");
+
+        pauseGame();
+
+        choice4A();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        clearScreen();
+
+        printf("You keep moving forward.\n\n");
+
+        printf("Suddenly, the goblin lunges at you!\n\n");
+
+        printf("You are too weak to defend yourself.\n");
+
+        deathEnding();
+    }
+
+    else {
+
+        printf("\nInvalid choice.\n");
+        pauseGame();
+
+        choice3A();
+    }
+}
+
+
+/* ===== CHOICE 4A ===== */
+
+void choice4A() {
+
+    char choice;
+
+    redScreen();
+
+    printf("You continue moving while still bleeding.\n\n");
+
+    printf("The goblin mutters something behind you.\n\n");
+
+    printf("Your leg becomes weaker because of the poison.\n\n");
+
+    printf("The goblin steps closer.\n\n");
+
+    printf("A. Stand Guard\n");
+    printf("B. Move Forward\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        clearScreen();
+
+        printf("You decide to stand your ground.\n\n");
+
+        printf("But your legs suddenly collapse.\n\n");
+
+        printf("The goblin takes the opportunity to attack.\n");
+
+        deathEnding();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        redScreen();
+
+        printf("You make one last attempt to move forward.\n\n");
+
+        printf("Your leg becomes even weaker.\n");
+
+        printf("You stumble and fall.\n\n");
+
+        pauseGame();
+
+        choice5A();
+    }
+
+    else {
+
+        printf("\nInvalid choice.\n");
+        pauseGame();
+
+        choice4A();
+    }
+}
+
+
+/* ===== CHOICE 5A ===== */
+
+void choice5A() {
+
+    char choice;
+
+    redScreen();
+
+    printf("You struggle to get back up.\n\n");
+
+    printf("A. Stand Up Again\n");
+    printf("B. Play Dead\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        clearScreen();
+
+        printf("You force yourself to stand up.\n\n");
+
+        printf("The goblin immediately attacks.\n");
+
+        deathEnding();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        clearScreen();
+
+        printf("You decide to play dead.\n\n");
+
+        printf("The goblin becomes cautious.\n\n");
+
+        printf("It waits.\n");
+        printf("And waits.\n\n");
+
+        printf("After several minutes, it slowly approaches you.\n");
+
+        pauseGame();
+
+        choice6A();
+    }
+
+    else {
+
+        printf("\nInvalid choice.\n");
+        pauseGame();
+
+        choice5A();
+    }
+}
+
+
+/* ===== CHOICE 6A ===== */
+
+void choice6A() {
+
+    char choice;
+
+    clearScreen();
+
+    printf("The goblin slowly moves closer.\n\n");
+
+    printf("A. Stay Still\n");
+    printf("B. Attack the Goblin\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        pauseGame();
+
+        choice7A();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        clearScreen();
+
+        printf("You suddenly attack the goblin!\n\n");
+
+        printf("The goblin quickly evades your attack.\n");
+        printf("It counters before you can react.\n\n");
+
+        deathEnding();
+    }
+
+    else {
+
+        printf("\nInvalid choice.\n");
+        pauseGame();
+
+        choice6A();
+    }
+}
+
+
+/* ===== CHOICE 7A ===== */
+
+void choice7A() {
+
+    char choice;
+
+    redScreen();
+
+    printf("The goblin moves even closer.\n\n");
+
+    printf("A. Stay Still\n");
+    printf("B. Grab the Goblin\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        clearScreen();
+
+        printf("You remain completely still.\n\n");
+
+        printf("The goblin realizes what you are doing.\n\n");
+
+        printf("You are too weak to continue.\n");
+
+        deathEnding();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        redScreen();
+
+        printf("As the goblin gets close enough...\n\n");
+
+        printf("You suddenly grab it!\n\n");
+
+        printf("You take the goblin to the ground.\n");
+
+        printf("After a struggle, you defeat it.\n\n");
+
+        printf("You are still bleeding.\n");
+        printf("Your leg is still badly weakened by the poison.\n\n");
+
+        pauseGame();
+
+        choice8A();
+    }
+
+    else {
+
+        printf("\nInvalid choice.\n");
+        pauseGame();
+
+        choice7A();
+    }
+}
+
+
+/* ===== CHOICE 8A ===== */
+
+void choice8A() {
+
+    char choice;
+
+    redScreen();
+
+    printf("You continue deeper into the dungeon.\n\n");
+
+    printf("Your leg is weak, so you begin crawling.\n\n");
+
+    printf("You crawl forward despite the pain.\n\n");
+
+    printf("You encounter more traps along the way.\n");
+
+    printf("Luckily, you do not step on them because\n");
+    printf("you are crawling.\n\n");
+
+    printf("Eventually, the path begins getting brighter.\n\n");
+
+    printf("Light crystals begin appearing again.\n\n");
+
+    printf("You keep moving forward while still bleeding.\n\n");
+
+    printf("Eventually, the path splits into two again.\n\n");
+
+    printf("A. Take the bright right path\n");
+    printf("B. Take the left path where you hear sounds\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        falseEscapeEnding();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        struggleEnding();
+    }
+
+    else {
+
+        printf("\nInvalid choice.\n");
+        pauseGame();
+
+        choice8A();
+    }
+}
+
+
+/* ================================================= */
+/*                  ROUTE B                           */
+/*             LIGHT CRYSTAL ROUTE                   */
+/* ================================================= */
+
+void routeB() {
+
+    clearScreen();
+
+    printf("============================================\n");
+    printf("          ROUTE B: LIGHT CRYSTAL ROUTE\n");
+    printf("============================================\n\n");
+
+    printf("You search for another source of light.\n\n");
+
+    printf("You find a light crystal attached to the\n");
+    printf("cave wall.\n\n");
+
+    printf("You break the crystal off and carry it\n");
+    printf("with you.\n\n");
+
+    printf("The dungeon is still dark, but the crystal\n");
+    printf("allows you to see clearly.\n\n");
+
+    printf("You continue forward.\n\n");
+
+    printf("You feel like something is following you.\n\n");
+
+    printf("You look behind you...\n");
+    printf("Nothing is there.\n\n");
+
+    printf("You continue moving.\n\n");
+
+    printf("With the crystal's light, you notice several\n");
+    printf("traps and easily avoid them.\n\n");
+
+    printf("Eventually, you reach two paths.\n");
+
+    pauseGame();
+
+    choice3B();
+}
+
+
+/* ===== CHOICE 3B ===== */
+
+void choice3B() {
+
+    char choice;
+
+    clearScreen();
+
+    printf("You reach another split in the dungeon.\n\n");
+
+    printf("A bright path is visible on the right.\n\n");
+
+    printf("A. Take the bright right path\n");
+    printf("B. Take the left path where you hear sounds\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        escapeEnding();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        clearScreen();
+
+        printf("You follow the sounds.\n\n");
+
+        printf("You discover a group of adventurers.\n\n");
+
+        printf("You approach them and ask if you can join.\n\n");
+
+        printf("They agree to let you join their group.\n\n");
+
+        printf("You travel and fight alongside them.\n\n");
+
+        printf("However, the group notices how weak you are.\n\n");
+
+        printf("They quietly mutter to each other.\n\n");
+
+        printf("Eventually, the group decides to rest.\n\n");
+
+        printf("You rest with them.\n\n");
+
+        printf("But you do not realize that they have\n");
+        printf("something planned for you...\n");
+
+        pauseGame();
+
+        betrayalEnding();
+    }
+
+    else {
+
+        printf("\nInvalid choice.\n");
+        pauseGame();
+
+        choice3B();
+    }
+}
+
+
+/* ===== CHOICE 4B ===== */
+
+void choice4B() {
+
+    char choice;
+
+    clearScreen();
+
+    printf("============================================\n");
+    printf("               SECOND CHANCE\n");
+    printf("============================================\n\n");
+
+    printf("You remember what happened before.\n\n");
+
+    printf("The adventurers are once again in front of you.\n\n");
+
+    printf("A. Join them again\n");
+    printf("B. Take revenge\n\n");
+
+    printf("Choice: ");
+    scanf(" %c", &choice);
+
+    if (choice == 'A' || choice == 'a') {
+
+        idiotEnding();
+    }
+
+    else if (choice == 'B' || choice == 'b') {
+
+        clearScreen();
+
+        printf("You decide to take revenge.\n\n");
+
+        printf("You attack the adventurers...\n\n");
+
+        printf("You fail.\n\n");
+
+        printf("You died.\n\n");
+
+        printf("RESTART AGAIN...\n");
+
+        pauseGame();
+
+        printf("\nYou try again.\n");
+        printf("And fail again.\n\n");
+
+        printf("RESTART AGAIN...\n");
+
+        pauseGame();
+
+        printf("\nYou try again.\n");
+        printf("And fail again.\n\n");
+
+        printf("RESTART AGAIN...\n");
+
+        pauseGame();
+
+        printf("\nYou have lost count of how many times\n");
+        printf("you have restarted.\n\n");
+
+        printf("But eventually...\n\n");
+
+        printf("You finally defeat the group of adventurers.\n\n");
+
+        printf("You have taken your revenge.\n");
+
+        revengeEnding();
+    }
+
+    else {
+
+        printf("\nInvalid choice.\n");
+        pauseGame();
+
+        choice4B();
+    }
+}
+
+
+/* ================================================= */
+/*                    ENDINGS                         */
+/* ================================================= */
+
+
+/* ===== NORMAL DEATH ===== */
+
+void deathEnding() {
+
+    redScreen();
+    
+    printf("\n\n============================================\n");
+    printf("                YOU DIED                    \n");
+    printf("============================================\n\n");
+    
+    printf("Your adventure has come to an end.\n");
+
+    restartGame();
+}
+
+
+/* ===== FALSE ESCAPE ===== */
+
+void falseEscapeEnding() {
+
+    redScreen();
+
+    printf("\n============================================\n");
+    printf("             FALSE ESCAPE\n");
+    printf("============================================\n\n");
+
+    printf("You follow the bright path.\n\n");
+
+    printf("You finally escape what seems to be\n");
+    printf("the entrance of the dungeon.\n\n");
+
+    printf("But you are still bleeding.\n");
+    printf("There is no one around to help you.\n\n");
+
+    printf("You eventually meet your end.\n");
+
+    restartGame();
+}
+
+
+/* ===== STRUGGLE ENDING ===== */
+
+void struggleEnding() {
+
+    clearScreen();
+
+    printf("============================================\n");
+    printf("             STRUGGLE ENDING\n");
+    printf("============================================\n\n");
+
+    printf("You follow the sounds.\n\n");
+
+    printf("You discover a group of adventurers.\n\n");
+
+    printf("They find you badly injured and help you.\n\n");
+
+    printf("You survived...\n\n");
+
+    printf("But your adventure has left you weak,\n");
+    printf("and recovery will not be easy.\n");
+
+    restartGame();
+}
+
+
+/* ===== ESCAPE ENDING ===== */
+
+void escapeEnding() {
+
+    clearScreen();
+
+    printf("============================================\n");
+    printf("              YOU ESCAPED?\n");
+    printf("============================================\n\n");
+
+    printf("You take the bright path.\n\n");
+
+    printf("You quickly find your way out of the dungeon.\n\n");
+
+    printf("You were supposed to challenge yourself...\n\n");
+
+    printf("But instead, you escaped.\n\n");
+
+    printf("Maybe surviving counts as a victory?\n");
+
+    restartGame();
+}
+
+
+/* ===== BETRAYAL ENDING ===== */
+
+void betrayalEnding() {
+
+    clearScreen();
+
+    printf("============================================\n");
+    printf("             BETRAYAL ENDING\n");
+    printf("============================================\n\n");
+
+    printf("While you are resting...\n\n");
+
+    printf("The adventurers suddenly turn against you.\n\n");
+
+    printf("You realize too late that they betrayed you.\n\n");
+
+    printf("You died.\n\n");
+
+    if (betrayalUnlocked == 0) {
+
+        betrayalUnlocked = 1;
+
+        printf("============================================\n");
+        printf("          SECRET PATH UNLOCKED\n");
+        printf("============================================\n\n");
+
+        printf("Something feels different this time...\n\n");
+        printf("RESTART AGAIN...\n");
+
+        pauseGame();
+
+        /* This is a REAL restart.
+           The game returns to the beginning. */
+
+        return;
+    }
+    else {
+
+        printf("RESTART AGAIN...\n");
+
+        pauseGame();
+
+        /* This is NOT a real restart.
+           The player gets the secret choice. */
+
+        choice4B();
+    }
+}
+
+
+/* ===== IDIOT ENDING ===== */
+
+void idiotEnding() {
+
+    clearScreen();
+
+    printf("============================================\n");
+    printf("       YOU DIED AGAIN, YOU IDIOT\n");
+    printf("============================================\n\n");
+
+    printf("You decided to trust the adventurers again.\n\n");
+
+    printf("They betray you once more.\n\n");
+
+    printf("You died again.\n\n");
+
+    restartGame();
+}
+
+
+/* ===== REVENGE ENDING ===== */
+
+void revengeEnding() {
+
+    clearScreen();
+
+    printf("============================================\n");
+    printf("              REVENGE ENDING\n");
+    printf("============================================\n\n");
+
+    printf("After countless attempts...\n\n");
+
+    printf("You finally defeated the adventurers.\n\n");
+
+    printf("You got your revenge.\n\n");
+
+    printf("But after everything you went through,\n");
+    printf("you wonder if the revenge was worth it.\n");
+
+    restartGame();
+}
+
+
+/* ================================================= */
+/*                 HELPER FUNCTIONS                   */
+/* ================================================= */
+
+
+/* ===== NORMAL RESTART ===== */
+
+void restartGame() {
+
+    printf("\n\nPress ENTER to return to the beginning...");
+    getchar();
+    getchar();
+
+    /*
+       Returning from the ending eventually brings
+       the program back to main(), where the player
+       is asked whether they want to play again.
+    */
+}
+
+
+/* ===== PAUSE ===== */
+
+void pauseGame() {
+
+    printf("\n\nPress ENTER to continue...");
+    getchar();
+    getchar();
+}
+
+
+/* ===== CLEAR SCREEN ===== */
+
+void clearScreen() {
+
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+
+    printf("\033[0m");
+}
+
+
+/* ===== DARK RED SCREEN ===== */
+
+void redScreen() {
+
+#ifdef _WIN32
+
+    system("cls");
+
+    /*
+       Dark red background with white text.
+       ANSI support may depend on the terminal.
+    */
+
+    printf("\033[48;2;80;0;0m");
+    printf("\033[97m");
+
+#else
+
+    system("clear");
+
+    printf("\033[48;2;80;0;0m");
+    printf("\033[97m");
+
+#endif
+}
+
+
+/* ===== NORMAL SCREEN ===== */
+
+
+void normalScreen() {
+
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+
+    printf("\033[0m");
+}
