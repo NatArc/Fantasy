@@ -63,7 +63,7 @@ int main() {
 }
 
 
-/* ===== INTRODUCTION ===== */
+/* INTRODUCTION */
 
 void introduction() {
 
@@ -73,25 +73,27 @@ void introduction() {
     printf("          FANTASY QUEST ADVENTURE\n");
     printf("============================================\n\n");
 
-    printf("You are a new adventurer who just started your new journey.\n\n");
-    
-    printf("And currently you are in a goblin dungeon.\n\n");
+    printf("YOU ARE A NEW ADVENTURER\n");
+    printf("WHO JUST STARTED YOUR JOURNEY.\n\n");
 
-    printf("While exploring deeper in the dungeon,\n");
-    printf("a mysterious portal suddenly appeared.\n\n");
+    printf("AND CURRENTLY YOU ARE IN A GOBLIN DUNGEON.\n\n");
 
-    printf("Curious about what lies beyond it, and wanting to challenge yourself\n");
-    printf("you step through the portal...\n\n");
+    printf("WHILE EXPLORING DEEPER IN THE DUNGEON,\n");
+    printf("A MYSTERIOUS PORTAL SUDDENLY APPEARED.\n\n");
 
-    printf("You suddenly find yourself inside a dark dungeon\n");
+    printf("CURIOUS ABOUT WHAT LIES BEYOND IT,\n");
+    printf("AND WANTING TO CHALLENGE YOURSELF,\n");
+    printf("YOU STEP THROUGH THE PORTAL...\n\n");
 
-    printf("Your quest begins.\n");
+    printf("YOU SUDDENLY FIND YOURSELF INSIDE A DARK DUNGEON.\n\n");
+
+    printf("YOUR QUEST BEGINS.\n");
 
     pauseGame();
 }
 
 
-/* ===== CHOICE 1 ===== */
+/* CHOICE 1 */
 
 void choice1() {
 
@@ -99,35 +101,39 @@ void choice1() {
 
     clearScreen();
 
-    printf("Unable to prepare for the darkness,\n");
-    printf("you stood still for your eyes to adjust.\n\n");
+    printf("BASED ON THE DUNGEON'S INFORMATION,\n");
+    printf("BECAUSE THERE ARE LIGHT CRYSTALS ON THE WALLS,\n");
+    printf("THERE'S NO REAL NEED FOR TORCHES.\n\n");
     
-    printf("After adjusting you explore deeper.\n\n");
+    printf("UNABLE TO PREPARE FOR THE DARKNESS,\n");
+    printf("YOU STOOD STILL FOR YOUR EYES TO ADJUST.\n\n");
     
-    printf("Deeper in the dungeon, 
-    printf("the area have light crystals that illuminates,\n");
-    printf("making exploring easier.\n\n");
+    printf("AFTER ADJUSTING, YOU EXPLORE DEEPER.\n\n");
     
-    printf("You continue moving.\n\n");
+    printf("DEEPER IN THE DUNGEON,\n");
+    printf("THE AREA HAS LIGHT CRYSTALS,\n");
+    printf("MAKING EXPLORING EASIER.\n\n");
     
-    printf("Eventually, the path splits into two.\n\n");
-
-    printf("A. Take the left path\n");
-    printf("B. Take the right path\n\n");
-
-    printf("Choice: ");
+    printf("YOU CONTINUE MOVING.\n\n");
+    
+    printf("EVENTUALLY, THE PATH SPLITS INTO TWO.\n\n");
+    
+    printf("A. TAKE THE LEFT PATH\n");
+    printf("B. TAKE THE RIGHT PATH\n\n");
+    
+    printf("CHOICE: ");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
 
         clearScreen();
 
-        printf("You take the left path.\n\n");
-        printf("You suddenly realize that you have entered\n");
-        printf("a goblin nest.\n\n");
-
-        printf("The goblins surround you.\n");
-        printf("There are too many of them.\n\n");
+        printf("YOU TAKE THE LEFT PATH.\n\n");
+        printf("YOU SUDDENLY REALIZE THAT YOU HAVE ENTERED\n");
+        printf("A GOBLIN NEST.\n\n");
+        
+        printf("THE GOBLINS SURROUND YOU.\n");
+        printf("THERE ARE TOO MANY OF THEM.\n\n");
 
         deathEnding();
     }
@@ -136,14 +142,14 @@ void choice1() {
 
         clearScreen();
 
-        printf("You take the right path.\n\n");
-
-        printf("A single goblin suddenly appears!\n\n");
-
-        printf("You quickly defeat it.\n\n");
-
-        printf("You continue deeper into the dungeon...\n");
-
+        printf("YOU TAKE THE RIGHT PATH.\n\n");
+        
+        printf("A SINGLE GOBLIN SUDDENLY APPEARS!\n\n");
+        
+        printf("YOU QUICKLY DEFEAT IT.\n\n");
+        
+        printf("YOU CONTINUE DEEPER INTO THE DUNGEON...\n");
+        
         pauseGame();
 
         choice2();
@@ -159,7 +165,7 @@ void choice1() {
 }
 
 
-/* ===== CHOICE 2 ===== */
+/* CHOICE 2 */
 
 void choice2() {
 
@@ -167,17 +173,17 @@ void choice2() {
 
     clearScreen();
 
-    printf("You continue deeper into the dungeon.\n\n");
-
-    printf("The light crystals on the walls become\n");
-    printf("fewer and fewer.\n\n");
-
-    printf("The dungeon is becoming darker.\n\n");
-
-    printf("A. Continue forward despite the darkness\n");
-    printf("B. Search for another source of light\n\n");
-
-    printf("Choice: ");
+    printf("YOU CONTINUE DEEPER INTO THE DUNGEON.\n\n");
+    
+    printf("THE LIGHT CRYSTALS ON THE WALLS BECOME\n");
+    printf("FEWER AND FEWER.\n\n");
+    
+    printf("THE DUNGEON IS BECOMING DARKER.\n\n");
+    
+    printf("A. CONTINUE FORWARD DESPITE THE DARKNESS\n");
+    printf("B. SEARCH FOR ANOTHER SOURCE OF LIGHT\n\n");
+    
+    printf("CHOICE: ");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
@@ -200,7 +206,7 @@ void choice2() {
 }
 
 
-/*ROUTE A*/
+/* ROUTE A */
 
 void routeA() {
 
@@ -210,51 +216,58 @@ void routeA() {
     printf("              ROUTE A: DARK ROUTE           \n");
     printf("============================================\n\n");
 
-    printf("You decide to continue despite the darkness.\n\n");
-
-    printf("You walk deeper into the dungeon.\n\n");
-
-    printf("Suddenly...\n");
+    printf("YOU DECIDE TO CONTINUE DESPITE THE DARKNESS.\n\n");
+    
+    printf("YOU WALK DEEPER INTO THE DUNGEON.\n\n");
+    
+    printf("SUDDENLY...\n");
     
     pauseGame();
     
     redScreen();
     
-    printf("You stepped on a spike trap!\n\n");
-
-    printf("Your leg is injured and begins bleeding.\n");
-    printf("The spike is poisoned and makes your leg weak\n");
-    printf("Luckily it only paralysed your leg but it still difficult to move.\n\n");
-    printf("\033[0m");
-    printf("You continue moving deeper into the dungeon.\n\n");
-
-    printf("You feel like something is following you.\n\n");
-
-    printf("You look behind you...\n");
-    printf("But there is nothing.\n\n");
-
-    printf("You decided to continue walking.\n\n");
-
-    printf("Then you hear footsteps behind you.\n\n");
-
-    printf("You stop.\n");
-    printf("The footsteps stop too.\n\n");
-
-    printf("Maybe you are imagining things.\n");
+    printf("YOU STEPPED ON A SPIKE TRAP!\n\n");
+    
+    printf("YOUR LEG IS INJURED AND BEGINS BLEEDING.\n\n");
+    printf("THE SPIKE IS POISONED AND MAKES YOUR LEG WEAK.\n\n");
+    printf("LUCKILY, IT ONLY PARALYSED YOUR LEG, BUT IT IS\n");
+    printf("STILL DIFFICULT TO MOVE.");
+    printf("\033[0m\n");
     
     pauseGame();
     
     clearScreen();
-    printf("You keep moving.\n\n");
-
-    printf("A quiet laugh comes from behind you.\n\n");
-
-    printf("You turn around.\n\n");
-
-    printf("A goblin is standing in the darkness.\n");
-    printf("It keeps its distance from you.\n\n");
-
-    printf("It seems to be waiting for you to become weaker.\n");
+    
+    printf("YOU CONTINUE MOVING DEEPER INTO THE DUNGEON.\n\n");
+    
+    printf("YOU FEEL LIKE SOMETHING IS FOLLOWING YOU.\n\n");
+    
+    printf("YOU LOOK BEHIND YOU...\n");
+    printf("BUT THERE IS NOTHING.\n\n");
+    
+    printf("YOU DECIDE TO CONTINUE WALKING.\n\n");
+    
+    printf("THEN YOU HEAR FOOTSTEPS BEHIND YOU.\n\n");
+    
+    printf("YOU STOP.\n");
+    printf("THE FOOTSTEPS STOP TOO.\n\n");
+    
+    printf("MAYBE YOU ARE IMAGINING THINGS.\n");
+    
+    pauseGame();
+    
+    clearScreen();
+    
+    printf("YOU KEEP MOVING.\n\n");
+    
+    printf("A QUIET LAUGH COMES FROM BEHIND YOU.\n\n");
+    
+    printf("YOU TURN AROUND.\n\n");
+    
+    printf("A GOBLIN IS STANDING IN THE DARKNESS.\n");
+    printf("IT KEEPS ITS DISTANCE FROM YOU.\n\n");
+    
+    printf("IT SEEMS TO BE WAITING FOR YOU TO BECOME WEAKER.\n");
 
     pauseGame();
 
@@ -270,26 +283,26 @@ void choice3A() {
 
     clearScreen();
 
-    printf("You begin moving again.\n\n");
-
-    printf("The goblin's footsteps slowly get closer.\n\n");
-
-    printf("A. Stand Guard\n");
-    printf("B. Keep Moving Forward\n\n");
-
-    printf("Choice: ");
+    printf("YOU BEGIN MOVING AGAIN.\n\n");
+    
+    printf("THE GOBLIN'S FOOTSTEPS SLOWLY GET CLOSER.\n\n");
+    
+    printf("A. STAND GUARD\n");
+    printf("B. KEEP MOVING FORWARD\n\n");
+    
+    printf("CHOICE: ");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
 
         clearScreen();
 
-        printf("You stop and stand guard.\n\n");
-
-        printf("The goblin steps back and laughed.\n\n");
-
-        printf("It is no longer trying to hide itself.\n");
-
+        printf("YOU STOP AND STAND GUARD.\n\n");
+        
+        printf("THE GOBLIN STEPS BACK AND LAUGHED.\n\n");
+        
+        printf("IT IS NO LONGER TRYING TO HIDE ITSELF.\n");
+        
         pauseGame();
 
         choice4A();
@@ -299,12 +312,15 @@ void choice3A() {
 
         clearScreen();
 
-        printf("You keep moving forward.\n\n");
+        printf("YOU KEEP MOVING FORWARD.\n\n");
+        
         redScreen();
-        printf("Suddenly, the goblin lunges at you!\n\n");
-
-        printf("You are too weak to defend yourself.\n");
+        
+        printf("SUDDENLY, THE GOBLIN LUNGES AT YOU!\n\n");
+        
+        printf("YOU ARE TOO WEAK TO DEFEND YOURSELF.");
         printf("\033[0m\n");
+        
         deathEnding();
     }
 
@@ -326,30 +342,33 @@ void choice4A() {
 
     redScreen();
 
-    printf("You continue moving while still bleeding.\n\n");
-    printf("\033[0m");
-    printf("The goblin giggles behind.\n\n");
-
-    printf("Your leg becomes.\n\n");
-
-    printf("The goblin moves closer towards you.\n\n");
-
-    printf("A. Stand Guard\n");
-    printf("B. Move Forward\n\n");
-
-    printf("Choice: ");
+    printf("YOU CONTINUE MOVING WHILE STILL BLEEDING.");
+    printf("\033[0m\n\n");
+    
+    printf("THE GOBLIN GIGGLES BEHIND.\n\n");
+    
+    printf("YOUR LEG BECOMES WEAKER.\n\n");
+    
+    printf("THE GOBLIN MOVES CLOSER TOWARDS YOU.\n\n");
+    
+    printf("A. STAND GUARD\n");
+    printf("B. MOVE FORWARD\n\n");
+    
+    printf("CHOICE: ");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
 
         clearScreen();
 
-        printf("You decide to stand your ground.\n\n");
+        printf("YOU DECIDED TO STAND YOUR GROUND.\n\n");
         redScreen();
-        printf("But your legs suddenly collapse.\n\n");
 
-        printf("Unable to prepare.\n\n");
-        printf("The goblin takes the opportunity to attack.\n");
+        printf("BUT YOUR LEGS SUDDENLY COLLAPSE.\n\n");
+        
+        printf("UNABLE TO PREPARE.\n\n");
+        
+        printf("THE GOBLIN TAKES THE OPPORTUNITY TO ATTACK.\n");
 
         printf("\033[0m\n");
         deathEnding();
@@ -854,7 +873,7 @@ void struggleEnding() {
 }
 
 
-/* ===== ESCAPE ENDING ===== */
+/* ESCAPE ENDING */
 
 void escapeEnding() {
 
@@ -878,23 +897,25 @@ void escapeEnding() {
 }
 
 
-/* ===== BETRAYAL ENDING ===== */
+/* BETRAYAL ENDING */
 
 void betrayalEnding() {
 
     clearScreen();
-
+    
+    redScreen();
     printf("============================================\n");
     printf("             BETRAYAL ENDING\n");
     printf("============================================\n\n");
+    printf("\033[0m");
 
-    printf("While you are resting...\n\n");
-
-    printf("The adventurers suddenly turn against you.\n\n");
-
-    printf("You realize too late that they betrayed you.\n\n");
-
-    printf("You died.\n\n");
+    printf("WHILE YOU ARE RESTING...\n\n");
+    
+    printf("THE ADVENTURERS SUDDENLY TURN AGAINST YOU.\n\n");
+    
+    printf("YOU REALIZE TOO LATE THAT THEY BETRAYED YOU.\n\n");
+    
+    printf("YOU DIED.\n\n");
 
     if (betrayalUnlocked == 0) {
 
@@ -904,8 +925,8 @@ void betrayalEnding() {
         printf("          SECRET PATH UNLOCKED\n");
         printf("============================================\n\n");
 
-        printf("Something feels different this time...\n\n");
-        printf("RESTART AGAIN...\n");
+        printf("SOMETHING FEELS DIFFERENT THIS TIME...\n\n");
+        printf("...\n");
 
         pauseGame();
 
@@ -933,16 +954,18 @@ void betrayalEnding() {
 void idiotEnding() {
 
     clearScreen();
-
+    
+    redScreen();
     printf("============================================\n");
-    printf("       YOU DIED AGAIN, YOU IDIOT\n");
+    printf("       YOU DIED AGAIN, YOU IDIOT            \n");
     printf("============================================\n\n");
+    printf("\033[0m");
 
-    printf("You decided to trust the adventurers again.\n\n");
-
-    printf("They betray you once more.\n\n");
-
-    printf("You died again.\n\n");
+    printf("YOU DECIDED TO TRUST THE ADVENTURERS AGAIN.\n\n");
+    
+    printf("THEY BETRAY YOU ONCE MORE.\n\n");
+    
+    printf("YOU DIED AGAIN.\n\n");
 
     restartGame();
 }
@@ -955,32 +978,31 @@ void revengeEnding() {
     clearScreen();
 
     printf("============================================\n");
-    printf("              REVENGE ENDING\n");
+    printf("              REVENGE ENDING                \n");
     printf("============================================\n\n");
 
-    printf("After countless attempts...\n\n");
-
-    printf("You finally defeated the adventurers.\n\n");
-
-    printf("You got your revenge.\n\n");
-
-    printf("But after everything you went through,\n");
-    printf("you wonder if the revenge was worth it.\n");
-
+    printf("AFTER COUNTLESS ATTEMPTS...\n\n");
+    
+    printf("YOU FINALLY DEFEATED THE ADVENTURERS.\n\n");
+    
+    printf("YOU GOT YOUR REVENGE.\n\n");
+    
+    printf("BUT AFTER EVERYTHING YOU WENT THROUGH,\n");
+    printf("YOU WONDER IF THE REVENGE WAS WORTH IT.\n");
+    
     restartGame();
 }
 
 
-/* ================================================= */
-/*                 HELPER FUNCTIONS                   */
-/* ================================================= */
+
+/* HELPER FUNCTIONS */
 
 
 /* ===== NORMAL RESTART ===== */
 
 void restartGame() {
 
-    printf("\n\nPress ENTER to return to the beginning...");
+    printf("\n\nPRESS ENTER TO RETURN TO THE BEGINNING...");
     getchar();
     getchar();
 
@@ -992,17 +1014,17 @@ void restartGame() {
 }
 
 
-/* ===== PAUSE ===== */
+/* PAUSE */
 
 void pauseGame() {
 
-    printf("\n\nPress ENTER to continue...");
+    printf("\n\nPRESS ENTER TO CONTINUE...");
     getchar();
     getchar();
 }
 
 
-/* ===== CLEAR SCREEN ===== */
+/* CLEAR SCREEN */
 
 void clearScreen() {
 
@@ -1017,7 +1039,7 @@ void clearScreen() {
 }
 
 
-/* Temporary dark-red screen */
+/* RED SCREEN */
 void redScreen() {
 
 #ifdef _WIN32
@@ -1031,7 +1053,7 @@ void redScreen() {
 }
 
 
-/* ===== NORMAL SCREEN ===== */
+/* NORMAL SCREEN */
 
 
 void normalScreen() {
