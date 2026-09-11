@@ -73,18 +73,19 @@ void introduction() {
     printf("          FANTASY QUEST ADVENTURE\n");
     printf("============================================\n\n");
 
-    printf("You are a beginner adventurer.\n\n");
+    printf("You are a new adventurer who just started your new journey.\n\n");
+    
+    printf("And currently you are in a goblin dungeon.\n\n");
 
-    printf("While exploring a cave, you discover a\n");
-    printf("mysterious portal hidden deep inside.\n\n");
+    printf("While exploring deeper in the dungeon,\n");
+    printf("a mysterious portal suddenly appeared.\n\n");
 
-    printf("Curious about what lies beyond it, you\n");
-    printf("step through the portal...\n\n");
+    printf("Curious about what lies beyond it, and wanting to challenge yourself\n");
+    printf("you step through the portal...\n\n");
 
-    printf("You suddenly find yourself inside a dark\n");
-    printf("dungeon inhabited by goblins.\n\n");
+    printf("You suddenly find yourself inside a dark dungeon\n");
 
-    printf("Your adventure begins.\n");
+    printf("Your quest begins.\n");
 
     pauseGame();
 }
@@ -98,8 +99,17 @@ void choice1() {
 
     clearScreen();
 
-    printf("You explore the dungeon deeper.\n\n");
-
+    printf("Unable to prepare for the darkness,\n");
+    printf("you stood still for your eyes to adjust.\n\n");
+    
+    printf("After adjusting you explore deeper.\n\n");
+    
+    printf("Deeper in the dungeon, 
+    printf("the area have light crystals that illuminates,\n");
+    printf("making exploring easier.\n\n");
+    
+    printf("You continue moving.\n\n");
+    
     printf("Eventually, the path splits into two.\n\n");
 
     printf("A. Take the left path\n");
@@ -190,10 +200,7 @@ void choice2() {
 }
 
 
-/* ================================================= */
-/*                  ROUTE A                           */
-/*                 DARK ROUTE                        */
-/* ================================================= */
+/*ROUTE A*/
 
 void routeA() {
 
@@ -207,33 +214,34 @@ void routeA() {
 
     printf("You walk deeper into the dungeon.\n\n");
 
-    printf("Suddenly...\n\n");
+    printf("Suddenly...\n");
     
     pauseGame();
     
     redScreen();
     
-    printf("You step on a poisoned spike trap!\n\n");
+    printf("You stepped on a spike trap!\n\n");
 
     printf("Your leg is injured and begins bleeding.\n");
-    printf("The paralysis poison makes your leg weak\n");
-    printf("and difficult to move.\n\n");
+    printf("The spike is poisoned and makes your leg weak\n");
+    printf("Luckily it only paralysed your leg but it still difficult to move.\n\n");
     printf("\033[0m");
     printf("You continue moving deeper into the dungeon.\n\n");
 
     printf("You feel like something is following you.\n\n");
 
     printf("You look behind you...\n");
-    printf("Nothing.\n\n");
+    printf("But there is nothing.\n\n");
 
-    printf("You continue walking.\n\n");
+    printf("You decided to continue walking.\n\n");
 
     printf("Then you hear footsteps behind you.\n\n");
 
     printf("You stop.\n");
     printf("The footsteps stop too.\n\n");
 
-    printf("Maybe you are imagining things.\n\n");
+    printf("Maybe you are imagining things.\n");
+    
     pauseGame();
     
     clearScreen();
@@ -278,7 +286,7 @@ void choice3A() {
 
         printf("You stop and stand guard.\n\n");
 
-        printf("You hear the goblin laugh.\n\n");
+        printf("The goblin steps back and laughed.\n\n");
 
         printf("It is no longer trying to hide itself.\n");
 
@@ -322,9 +330,9 @@ void choice4A() {
     printf("\033[0m");
     printf("The goblin giggles behind.\n\n");
 
-    printf("Your leg becomes weaker because of the poison.\n\n");
+    printf("Your leg becomes.\n\n");
 
-    printf("The goblin steps closer.\n\n");
+    printf("The goblin moves closer towards you.\n\n");
 
     printf("A. Stand Guard\n");
     printf("B. Move Forward\n\n");
@@ -340,7 +348,9 @@ void choice4A() {
         redScreen();
         printf("But your legs suddenly collapse.\n\n");
 
+        printf("Unable to prepare.\n\n");
         printf("The goblin takes the opportunity to attack.\n");
+
         printf("\033[0m\n");
         deathEnding();
     }
