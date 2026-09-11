@@ -238,8 +238,6 @@ void routeA() {
 
 	pauseGame();
     
-    clearScreen();
-    
 	redScreen();
 
 	printf("STEPPED ON A GOBLIN TRAP!\n\n");
@@ -311,12 +309,9 @@ void choice3A() {
 
 	printf("YOU BEGIN MOVING AGAIN.\n\n");
 	
-	redScreen();
-	
 	printf("THE POISON IS SPREADING\n\n");
 	
 	printf("YOUR RIGHT FOOT HAS GONE NUMB.\n");
-	printf("\033[0m\n\n");
 	
 	printf("THE GOBLIN'S FOOTSTEPS SLOWLY GETS CLOSER.\n\n");
 
@@ -350,12 +345,9 @@ void choice3A() {
 
 		printf("YOU KEEP MOVING FORWARD.\n\n");
 
-		redScreen();
-
 		printf("SUDDENLY, THE GOBLIN LUNGES AT YOU!\n\n");
 
-		printf("YOU ARE TOO WEAK TO DEFEND YOURSELF.");
-		printf("\033[0m\n");
+		printf("YOU ARE TOO WEAK TO DEFEND YOURSELF.\n");
 		
 		pauseGame();
 
@@ -379,10 +371,9 @@ void choice4A() {
 
 	char choice;
 
-	redScreen();
+	clearScreen();
 
-	printf("YOU CONTINUE MOVING WHILE STILL BLEEDING.");
-	printf("\033[0m\n\n");
+	printf("YOU CONTINUE MOVING WHILE STILL BLEEDING.\n\n");
 
 	printf("THE GOBLIN GIGGLES BEHIND.\n\n");
 
@@ -456,7 +447,8 @@ void choice5A() {
     printf("A. STAND UP AGAIN\n");
     printf("B. PLAY DEAD\n\n");
 
-    printf("CHOICE: ");
+    printf("CHOICE: \n");
+    printf("\033[0m");
 	scanf(" %c", &choice);
 
 	if (choice == 'A' || choice == 'a') {
@@ -529,11 +521,9 @@ void choice6A() {
 
 	else if (choice == 'B' || choice == 'b') {
 
-		clearScreen();
+		redScreen();
 
 		printf("YOU ATTACK THE GOBLIN!\n\n");
-
-		redScreen();
 
 		printf("THE GOBLIN REACTED AND QUICKLY EVADES YOUR ATTACK.\n");
 		printf("IT COUNTERS BEFORE YOU CAN REACT.\n\n");
