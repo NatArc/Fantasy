@@ -734,39 +734,47 @@ void choice3B() {
 		escapeEnding();
 	}
 
-	else if (choice == 'B' || choice == 'b') {
+else if (choice == 'B' || choice == 'b') {
 
-		clearScreen();
+    if (betrayalUnlocked == 1) {
 
-		printf("YOU FOLLOW THE SOUNDS.\n\n");
+        choice4B();
 
-		printf("YOU DISCOVER A GROUP OF ADVENTURERS.\n\n");
-		
-		printf("THEY SEEM TO PREPARING TO DELVE DEEPER.\n\n");
+    }
+    else {
 
-		printf("YOU APPROACH THEM AND ASK IF YOU CAN JOIN.\n\n");
-		
-		printf("AFTER THEIR BRIEF DISCUSSION.\n\n");
+        clearScreen();
 
-		printf("THEY AGREE TO LET YOU JOIN THEIR GROUP.\n\n");
+        printf("YOU FOLLOW THE SOUNDS.\n\n");
 
-		printf("YOU THEN EXPLORE DEEPER AND FIGHTED ALONGSIDE THEM.\n\n");
+        printf("YOU DISCOVER A GROUP OF ADVENTURERS.\n\n");
+        
+        printf("THEY SEEM TO PREPARING TO DELVE DEEPER.\n\n");
 
-		printf("HOWEVER, THE GROUP NOTICES HOW WEAK YOU ARE.\n\n");
+        printf("YOU APPROACH THEM AND ASK IF YOU CAN JOIN.\n\n");
+        
+        printf("AFTER THEIR BRIEF DISCUSSION.\n\n");
 
-		printf("THEY QUIETLY MUTTER TO EACH OTHER.\n\n");
+        printf("THEY AGREE TO LET YOU JOIN THEIR GROUP.\n\n");
 
-		printf("EVENTUALLY, THE GROUP DECIDES TO REST.\n\n");
+        printf("YOU THEN EXPLORE DEEPER AND FIGHTED ALONGSIDE THEM.\n\n");
 
-		printf("YOU REST WITH THEM.\n\n");
+        printf("HOWEVER, THE GROUP NOTICES HOW WEAK YOU ARE.\n\n");
 
-		printf("BUT YOU DO NOT REALIZE THAT THEY HAVE\n");
-		printf("SOMETHING PLANNED FOR YOU...\n");
+        printf("THEY QUIETLY MUTTER TO EACH OTHER.\n\n");
 
-		pauseGame();
+        printf("EVENTUALLY, THE GROUP DECIDES TO REST.\n\n");
 
-		betrayalEnding();
-	}
+        printf("YOU REST WITH THEM.\n\n");
+
+        printf("BUT YOU DO NOT REALIZE THAT THEY HAVE\n");
+        printf("SOMETHING PLANNED FOR YOU...\n");
+
+        pauseGame();
+
+        betrayalEnding();
+    }
+}
 
 	else {
 
@@ -975,51 +983,35 @@ void escapeEnding() {
 
 void betrayalEnding() {
 
-	clearScreen();
+    clearScreen();
 
-	redScreen();
-	printf("============================================\n");
-	printf("             BETRAYAL ENDING                \n");
-	printf("============================================\n\n");
-	printf("\033[0m");
+    redScreen();
 
-	printf("WHILE YOU ARE RESTING...\n\n");
+    printf("============================================\n");
+    printf("             BETRAYAL ENDING                \n");
+    printf("============================================\n\n");
+    printf("\033[0m");
 
-	printf("THE ADVENTURERS SUDDENLY TURN AGAINST YOU.\n\n");
+    printf("WHILE YOU ARE RESTING...\n\n");
 
-	printf("YOU REALIZE TOO LATE THAT THEY BETRAYED YOU.\n\n");
+    printf("THE ADVENTURERS SUDDENLY TURN AGAINST YOU.\n\n");
 
-	printf("YOU DIED.\n\n");
+    printf("YOU REALIZE TOO LATE THAT THEY BETRAYED YOU.\n\n");
 
-	if (betrayalUnlocked == 0) {
+    printf("YOU DIED.\n\n");
 
-		betrayalUnlocked = 1;
+    betrayalUnlocked = 1;
 
-		printf("============================================\n");
-		printf("          SECRET PATH UNLOCKED              \n");
-		printf("============================================\n\n");
+    printf("============================================\n");
+    printf("          SECRET PATH UNLOCKED              \n");
+    printf("============================================\n\n");
 
-		printf("SOMETHING FEELS DIFFERENT THIS TIME...\n\n");
-		printf("...\n");
+    printf("SOMETHING FEELS DIFFERENT THIS TIME...\n\n");
+    printf("...\n");
 
-		pauseGame();
+    pauseGame();
 
-		/* This is a REAL restart.
-		   The game returns to the beginning. */
-
-		return;
-	}
-	else {
-
-		printf("RESTART AGAIN...\n");
-
-		pauseGame();
-
-		/* This is NOT a real restart.
-		   The player gets the secret choice. */
-
-		choice4B();
-	}
+    return;
 }
 
 
@@ -1072,7 +1064,7 @@ void revengeEnding() {
 /* HELPER FUNCTIONS */
 
 
-/* ===== NORMAL RESTART ===== */
+/* NORMAL RESTART */
 
 void restartGame() {
 
