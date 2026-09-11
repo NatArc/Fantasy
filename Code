@@ -134,9 +134,10 @@ void choice1() {
 		
 		printf("NOTHING, BUT A LONG HALLWAY.\n\n");
 
-		printf("YOU EXPLORE DEEPER.\n\n");
+		printf("YOU EXPLORE FURTHER.\n\n");
 		
-		printf("YOU ENTERED A CHAMBER.\n\n");
+		printf("YOU SEE A CHAMBER FURTHER INSIDE,\n");
+		printf("YOU THEN ENTERED.\n\n");
 
 		printf("YOU THEN REALIZE THAT THE CHAMBER IS\n");
 		printf("A GOBLIN NEST.\n\n");
@@ -231,9 +232,9 @@ void routeA() {
 
 	printf("YOU DECIDE TO CONTINUE DESPITE THE DARKNESS.\n\n");
 
-	printf("YOU WALK DEEPER INTO THE DUNGEON.\n\n");
+	printf("WHILE WALKING THROUGH THE DARK.\n\n");
 
-	printf("SUDDENLY...\n");
+	printf("YOU SUDDENLY...\n");
 
 	pauseGame();
     
@@ -241,18 +242,20 @@ void routeA() {
     
 	redScreen();
 
-	printf("YOU STEPPED ON A GOBLIN TRAP!\n\n");
+	printf("STEPPED ON A GOBLIN TRAP!\n\n");
 
 	printf("YOUR LEG IS INJURED AND BEGINS BLEEDING.\n\n");
 	
 	printf("THE TRAP IS POISONED AND MAKES YOUR LEG WEAK.\n\n");
 	
 	printf("LUCKILY, IT ONLY PARALYSED YOUR FOOT, BUT IT MAKES\n");
-	printf("IT DIFFICULT TO MOVE.");
-	printf("\033[0m\n");
+	printf("IT DIFFICULT TO MOVE.\n\n");
 
 	printf("YOU ARE UNSURE IF THE GOBLIN THAT LAID THE TRAP,\n");
 	printf("IS WAITING SOMEWHERE IN THE AREA.\n\n");
+	
+	printf("YOU FREE YOURSELF FROM THE TRAP.");
+	printf("\033[0m\n");
 
 	pauseGame();
 
@@ -308,11 +311,13 @@ void choice3A() {
 
 	printf("YOU BEGIN MOVING AGAIN.\n\n");
 	
+	redScreen();
+	
 	printf("THE POISON IS SPREADING\n\n");
 	
-	printf("YOUR RIGHT LEG FOOT HAS GONE NUMB.\n\n");
+	printf("YOUR RIGHT FOOT HAS GONE NUMB.\n");
+	printf("\033[0m\n\n");
 	
-
 	printf("THE GOBLIN'S FOOTSTEPS SLOWLY GETS CLOSER.\n\n");
 
 	printf("A. STAND GUARD\n");
