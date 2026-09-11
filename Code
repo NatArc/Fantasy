@@ -608,7 +608,7 @@ void choice8A() {
 
     else {
 
-        printf("\nInvalid choice.\n");
+        printf("\nINVALID CHOICE\n");
         pauseGame();
 
         choice8A();
@@ -616,10 +616,9 @@ void choice8A() {
 }
 
 
-/* ================================================= */
-/*                  ROUTE B                           */
-/*             LIGHT CRYSTAL ROUTE                   */
-/* ================================================= */
+
+/* ROUTE B */
+
 
 void routeB() {
 
@@ -629,30 +628,30 @@ void routeB() {
     printf("          ROUTE B: LIGHT CRYSTAL ROUTE\n");
     printf("============================================\n\n");
 
-    printf("You search for another source of light.\n\n");
+    printf("YOU SEARCH FOR ANOTHER SOURCE OF LIGHT.\n\n");
+    
+    printf("YOU FIND A LIGHT CRYSTAL ATTACHED TO THE\n");
+    printf("CAVE WALL.\n\n");
+    
+    printf("YOU BREAK THE CRYSTAL OFF AND CARRY IT\n");
+    printf("WITH YOU.\n\n");
+    
+    printf("THE DUNGEON IS STILL DARK, BUT THE CRYSTAL\n");
+    printf("ALLOWS YOU TO SEE CLEARLY.\n\n");
 
-    printf("You find a light crystal attached to the\n");
-    printf("cave wall.\n\n");
-
-    printf("You break the crystal off and carry it\n");
-    printf("with you.\n\n");
-
-    printf("The dungeon is still dark, but the crystal\n");
-    printf("allows you to see clearly.\n\n");
-
-    printf("You continue forward.\n\n");
-
-    printf("You feel like something is following you.\n\n");
-
-    printf("You look behind you...\n");
-    printf("Nothing is there.\n\n");
-
-    printf("You continue moving.\n\n");
-
-    printf("With the crystal's light, you notice several\n");
-    printf("traps and easily avoid them.\n\n");
-
-    printf("Eventually, you reach two paths.\n");
+    printf("YOU CONTINUE FORWARD.\n\n");
+    
+    printf("YOU FEEL LIKE SOMETHING IS FOLLOWING YOU.\n\n");
+    
+    printf("YOU LOOK BEHIND YOU...\n");
+    printf("NOTHING IS THERE.\n\n");
+    
+    printf("YOU CONTINUE MOVING.\n\n");
+    
+    printf("WITH THE CRYSTAL'S LIGHT, YOU NOTICE SEVERAL\n");
+    printf("TRAPS AND EASILY AVOID THEM.\n\n");
+    
+    printf("EVENTUALLY, YOU REACH TWO PATHS.\n");
 
     pauseGame();
 
@@ -660,7 +659,7 @@ void routeB() {
 }
 
 
-/* ===== CHOICE 3B ===== */
+/* CHOICE 3B */
 
 void choice3B() {
 
@@ -668,14 +667,14 @@ void choice3B() {
 
     clearScreen();
 
-    printf("You reach another split in the dungeon.\n\n");
-
-    printf("A bright path is visible on the right.\n\n");
-
-    printf("A. Take the bright right path\n");
-    printf("B. Take the left path where you hear sounds\n\n");
-
-    printf("Choice: ");
+    printf("YOU REACH ANOTHER SPLIT IN THE DUNGEON.\n\n");
+    
+    printf("A BRIGHT PATH IS VISIBLE ON THE RIGHT.\n\n");
+    
+    printf("A. TAKE THE BRIGHT RIGHT PATH\n");
+    printf("B. TAKE THE LEFT PATH WHERE YOU HEAR SOUNDS\n\n");
+    
+    printf("CHOICE: ");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
@@ -687,26 +686,26 @@ void choice3B() {
 
         clearScreen();
 
-        printf("You follow the sounds.\n\n");
-
-        printf("You discover a group of adventurers.\n\n");
-
-        printf("You approach them and ask if you can join.\n\n");
-
-        printf("They agree to let you join their group.\n\n");
-
-        printf("You travel and fight alongside them.\n\n");
-
-        printf("However, the group notices how weak you are.\n\n");
-
-        printf("They quietly mutter to each other.\n\n");
-
-        printf("Eventually, the group decides to rest.\n\n");
-
-        printf("You rest with them.\n\n");
-
-        printf("But you do not realize that they have\n");
-        printf("something planned for you...\n");
+        printf("YOU FOLLOW THE SOUNDS.\n\n");
+        
+        printf("YOU DISCOVER A GROUP OF ADVENTURERS.\n\n");
+        
+        printf("YOU APPROACH THEM AND ASK IF YOU CAN JOIN.\n\n");
+        
+        printf("THEY AGREE TO LET YOU JOIN THEIR GROUP.\n\n");
+        
+        printf("YOU TRAVEL AND FIGHT ALONGSIDE THEM.\n\n");
+        
+        printf("HOWEVER, THE GROUP NOTICES HOW WEAK YOU ARE.\n\n");
+        
+        printf("THEY QUIETLY MUTTER TO EACH OTHER.\n\n");
+        
+        printf("EVENTUALLY, THE GROUP DECIDES TO REST.\n\n");
+        
+        printf("YOU REST WITH THEM.\n\n");
+        
+        printf("BUT YOU DO NOT REALIZE THAT THEY HAVE\n");
+        printf("SOMETHING PLANNED FOR YOU...\n");
 
         pauseGame();
 
@@ -715,7 +714,7 @@ void choice3B() {
 
     else {
 
-        printf("\nInvalid choice.\n");
+        printf("\nINVALID CHOICE.\n");
         pauseGame();
 
         choice3B();
@@ -732,17 +731,17 @@ void choice4B() {
     clearScreen();
 
     printf("============================================\n");
-    printf("               SECOND CHANCE\n");
+    printf("               SECOND CHANCE                \n");
     printf("============================================\n\n");
-
-    printf("You remember what happened before.\n\n");
-
-    printf("The adventurers are once again in front of you.\n\n");
-
-    printf("A. Join them again\n");
-    printf("B. Take revenge\n\n");
-
-    printf("Choice: ");
+    
+    printf("YOU REMEMBER WHAT HAPPENED BEFORE.\n\n");
+    
+    printf("THE ADVENTURERS ARE ONCE AGAIN IN FRONT OF YOU.\n\n");
+    
+    printf("A. JOIN THEM AGAIN\n");
+    printf("B. TAKE REVENGE\n\n");
+    
+    printf("CHOICE: ");
     scanf(" %c", &choice);
 
     if (choice == 'A' || choice == 'a') {
@@ -754,47 +753,47 @@ void choice4B() {
 
         clearScreen();
 
-        printf("You decide to take revenge.\n\n");
+        printf("YOU DECIDE TO TAKE REVENGE.\n\n");
+        
+        printf("YOU ATTACK THE ADVENTURERS...\n\n");
+        
+        printf("YOU FAIL.\n\n");
+        
+        printf("YOU DIED.\n\n");
+        
+        printf("RESTART AGAIN...\n");
 
-        printf("You attack the adventurers...\n\n");
+        pauseGame();
 
-        printf("You fail.\n\n");
-
-        printf("You died.\n\n");
+        printf("\nYOU TRY AGAIN.\n");
+        printf("AND FAIL AGAIN.\n\n");
 
         printf("RESTART AGAIN...\n");
 
         pauseGame();
 
-        printf("\nYou try again.\n");
-        printf("And fail again.\n\n");
-
+        printf("\nYOU KEEP TRYING AGAIN.\n");
+        printf("AND KEEP FAILING AGAIN.\n\n");
+    
         printf("RESTART AGAIN...\n");
 
         pauseGame();
 
-        printf("\nYou try again.\n");
-        printf("And fail again.\n\n");
-
-        printf("RESTART AGAIN...\n");
-
-        pauseGame();
-
-        printf("\nYou have lost count of how many times\n");
-        printf("you have restarted.\n\n");
-
-        printf("But eventually...\n\n");
-
-        printf("You finally defeat the group of adventurers.\n\n");
-
-        printf("You have taken your revenge.\n");
+        printf("\nYOU HAVE LOST COUNT OF HOW MANY TIMES\n");
+        printf("YOU HAVE RESTARTED.\n\n");
+        
+        printf("BUT EVENTUALLY...\n\n");
+        
+        printf("YOU FINALLY DEFEAT THE GROUP OF ADVENTURERS.\n\n");
+        
+        printf("YOU HAVE TAKEN YOUR REVENGE.\n");
 
         revengeEnding();
     }
 
     else {
 
-        printf("\nInvalid choice.\n");
+        printf("\nINVALID CHOICE.\n");
         pauseGame();
 
         choice4B();
@@ -971,7 +970,7 @@ void idiotEnding() {
 }
 
 
-/* ===== REVENGE ENDING ===== */
+/* REVENGE ENDING */
 
 void revengeEnding() {
 
