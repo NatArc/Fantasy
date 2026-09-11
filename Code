@@ -311,7 +311,7 @@ void choice3A() {
 	
 	printf("THE POISON IS SPREADING\n\n");
 	
-	printf("YOUR RIGHT FOOT HAS GONE NUMB.\n");
+	printf("YOUR RIGHT FOOT HAS GONE NUMB.\n\n");
 	
 	printf("THE GOBLIN'S FOOTSTEPS SLOWLY GETS CLOSER.\n\n");
 
@@ -413,7 +413,7 @@ void choice4A() {
 
         printf("YOU MAKE AN ATTEMPT TO MOVE FORWARD.\n\n");
         
-        printf("YOUR LEG BECOMES EVEN WEAKER.\n");
+        printf("YOUR LEG BECOMES EVEN WEAKER.\n\n");
         
         printf("YOU STUMBLE AND COLLAPSE.\n\n");
 		printf("\033[0m\n");
@@ -447,7 +447,7 @@ void choice5A() {
     printf("A. STAND UP AGAIN\n");
     printf("B. PLAY DEAD\n\n");
 
-    printf("CHOICE: \n");
+    printf("CHOICE: ");
     printf("\033[0m");
 	scanf(" %c", &choice);
 
@@ -525,8 +525,9 @@ void choice6A() {
 
 		printf("YOU ATTACK THE GOBLIN!\n\n");
 
-		printf("THE GOBLIN REACTED AND QUICKLY EVADES YOUR ATTACK.\n");
-		printf("IT COUNTERS BEFORE YOU CAN REACT.\n\n");
+		printf("THE GOBLIN REACTED AND QUICKLY EVADES YOUR ATTACK.\n\n");
+		
+		printf("IT COUNTERS BEFORE YOU CAN REACT.");
 		printf("\033[0m\n");
 		
 		pauseGame();
@@ -559,16 +560,14 @@ void choice7A() {
 	printf("B. GRAB THE GOBLIN\n\n");
 
 	printf("CHOICE: ");
-	printf("\033[0m\n");
+	printf("\033[0m");
 	scanf(" %c", &choice);
 
 	if (choice == 'A' || choice == 'a') {
 
-		clearScreen();
+		redScreen();
 
 		printf("YOUR REMAIN COMPLETELY STILL.\n\n");
-
-		redScreen();
 
 		printf("YOU WERE STABBED.\n\n");
 
@@ -586,18 +585,18 @@ void choice7A() {
 
 		redScreen();
 
-        printf("AS THE GOBLIN GETS CLOSE ENOUGH...\n\n");
+        printf("AS IT GETS CLOSE ENOUGH...\n\n");
 
-        printf("YOU THEN GRAB IT!\n\n");
+        printf("YOU GRABBED THE GOBLIN!\n\n");
 
         printf("YOU TAKE THE GOBLIN TO THE GROUND.\n\n");
         
-        printf("YOU BEAT IT UP TO DEATH.\n");
+        printf("AND YOU BEAT IT UP TO DEATH.\n\n");
 
-        printf("AFTER A STRUGGLE, YOU DEFEAT IT.\n\n");
+        printf("AFTER A STRUGGLE, YOU DEFEATED IT.\n\n");
 
-        printf("YOU ARE STILL BLEEDING.\n");
-        printf("YOUR LEG IS STILL BADLY WEAKENED BY THE POISON.\n\n");
+        printf("BUT YOU ARE STILL BLEEDING.\n\n");
+        printf("YOUR LEG IS STILL BADLY WEAKENED BY THE POISON.");
         printf("\033[0m\n");
 
 		pauseGame();
@@ -626,7 +625,7 @@ void choice8A() {
 
 	printf("YOU CONTINUE DEEPER INTO THE DUNGEON.\n\n");
 
-	printf("YOUR LEG IS WEAK, SO YOU BEGIN CRAWLING.\n\n");
+	printf("YOUR LEG BECOMES WEAK, SO YOU BEGIN CRAWLING.\n\n");
 
 	printf("YOU CRAWL FORWARD DESPITE THE PAIN.\n\n");
 
@@ -809,7 +808,7 @@ void choice4B() {
 
 	else if (choice == 'B' || choice == 'b') {
 
-		clearScreen();
+		redScreen();
 
 		printf("YOU DECIDE TO TAKE REVENGE.\n\n");
 
@@ -824,16 +823,23 @@ void choice4B() {
 		pauseGame();
 
 		printf("\nYOU TRY AGAIN.\n");
-		printf("AND FAIL AGAIN.\n\n");
+		printf("AND FAIL AGAIN..\n\n");
 
 		printf("RESTART AGAIN...\n");
 
 		pauseGame();
 
 		printf("\nYOU KEEP TRYING AGAIN.\n");
-		printf("AND KEEP FAILING AGAIN.\n\n");
+		printf("AND KEEP FAILING AGAIN..\n\n");
 
-		printf("RESTART AGAIN...\n");
+		printf("KEEP RESTARTING AGAIN...\n");
+		
+		pauseGame();
+		
+		printf("\nAND AGAIN.\n");
+		printf("AND AGAIN..\n\n");
+
+		printf("AND AGAIN...\n");
 
 		pauseGame();
 
@@ -845,7 +851,7 @@ void choice4B() {
 		printf("YOU FINALLY DEFEAT THE GROUP OF ADVENTURERS.\n\n");
 
 		printf("YOU HAVE TAKEN YOUR REVENGE.\n");
-
+    	printf("\033[0m\n");
 		revengeEnding();
 	}
 
@@ -922,7 +928,8 @@ void struggleEnding() {
 
 	printf("YOU DISCOVER A GROUP OF ADVENTURERS.\n\n");
 
-	printf("THEY FIND YOU BADLY INJURED, THEY PITY AND HELP YOU.\n\n");
+	printf("THEY FIND YOU BADLY INJURED,"); 
+	printf("THEY TOOK PITY AND HELPED YOU.\n\n");
 
 	printf("YOU SURVIVED.\n\n");
 
@@ -934,7 +941,7 @@ void struggleEnding() {
     printf("BUT YOU PROVED THAT YOU HAD THE WILL TO SURVIVE.\n\n");
 
     printf("\nYOU SURVIVED THE DUNGEON.\n");
-    printf("AND YOUR JOURNEY IS FAR FROM OVER.\n");
+    printf("BUT YOUR JOURNEY IS FAR FROM OVER.\n");
 
 	restartGame();
 }
