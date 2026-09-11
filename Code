@@ -723,7 +723,7 @@ void choice3B() {
 }
 
 
-/* ===== CHOICE 4B ===== */
+/* CHOICE 4B */
 
 void choice4B() {
 
@@ -802,12 +802,12 @@ void choice4B() {
 }
 
 
-/* ================================================= */
-/*                    ENDINGS                         */
-/* ================================================= */
+
+/*   ENDINGS   */
 
 
-/* ===== NORMAL DEATH ===== */
+
+/* NORMAL DEATH */
 
 void deathEnding() {
 
@@ -817,38 +817,38 @@ void deathEnding() {
     printf("                YOU DIED                    \n");
     printf("============================================\n\n");
     printf("\033[0m");
-    printf("Your adventure has come to an end.\n");
+    printf("YOUR ADVENTURE HAS COME TO AN END.\n");
 
     restartGame();
 }
 
 
-/* ===== FALSE ESCAPE ===== */
+/* FALSE ESCAPE */
 
 void falseEscapeEnding() {
 
     redScreen();
 
     printf("\n============================================\n");
-    printf("             FALSE ESCAPE\n");
+    printf("             FALSE ESCAPE                   \n");
     printf("============================================\n\n");
     printf("\033[0m");
 
-    printf("You follow the bright path.\n\n");
-
-    printf("You finally escape what seems to be\n");
-    printf("the entrance of the dungeon.\n\n");
-
-    printf("But you are still bleeding.\n");
-    printf("There is no one around to help you.\n\n");
-
-    printf("You eventually meet your end.\n");
+    printf("YOU FOLLOW THE BRIGHT PATH.\n\n");
+    
+    printf("YOU FINALLY ESCAPE WHAT SEEMS TO BE\n");
+    printf("THE ENTRANCE OF THE DUNGEON.\n\n");
+    
+    printf("BUT YOU ARE STILL BLEEDING.\n");
+    printf("THERE IS NO ONE AROUND TO HELP YOU.\n\n");
+    
+    printf("YOU EVENTUALLY MEET YOUR END.\n");
 
     restartGame();
 }
 
 
-/* ===== STRUGGLE ENDING ===== */
+/* STRUGGLE ENDING */
 
 void struggleEnding() {
 
@@ -857,18 +857,18 @@ void struggleEnding() {
     printf("============================================\n");
     printf("             STRUGGLE ENDING\n");
     printf("============================================\n\n");
-
-    printf("You follow the sounds.\n\n");
-
-    printf("You discover a group of adventurers.\n\n");
-
-    printf("They find you badly injured and help you.\n\n");
-
-    printf("You survived...\n\n");
-
-    printf("But your adventure has left you weak,\n");
-    printf("and recovery will not be easy.\n");
-
+    
+    printf("YOU FOLLOW THE SOUNDS.\n\n");
+    
+    printf("YOU DISCOVER A GROUP OF ADVENTURERS.\n\n");
+    
+    printf("THEY FIND YOU BADLY INJURED AND HELP YOU.\n\n");
+    
+    printf("YOU SURVIVED...\n\n");
+    
+    printf("BUT YOUR ADVENTURE HAS LEFT YOU WEAK,\n");
+    printf("AND RECOVERY WILL NOT BE EASY.\n");
+    
     restartGame();
 }
 
@@ -880,18 +880,18 @@ void escapeEnding() {
     clearScreen();
 
     printf("============================================\n");
-    printf("              YOU ESCAPED?\n");
+    printf("              YOU ESCAPED?                  \n");
     printf("============================================\n\n");
-
-    printf("You take the bright path.\n\n");
-
-    printf("You quickly find your way out of the dungeon.\n\n");
-
-    printf("You were supposed to challenge yourself...\n\n");
-
-    printf("But instead, you escaped.\n\n");
-
-    printf("Maybe surviving counts as a victory?\n");
+    
+    printf("YOU TAKE THE BRIGHT PATH.\n\n");
+    
+    printf("YOU QUICKLY FIND YOUR WAY OUT OF THE DUNGEON.\n\n");
+    
+    printf("YOU WERE SUPPOSED TO CHALLENGE YOURSELF...\n\n");
+    
+    printf("BUT INSTEAD, YOU ESCAPED.\n\n");
+    
+    printf("MAYBE SURVIVING COUNTS AS A VICTORY?\n");
 
     restartGame();
 }
@@ -905,7 +905,7 @@ void betrayalEnding() {
     
     redScreen();
     printf("============================================\n");
-    printf("             BETRAYAL ENDING\n");
+    printf("             BETRAYAL ENDING                \n");
     printf("============================================\n\n");
     printf("\033[0m");
 
@@ -922,7 +922,7 @@ void betrayalEnding() {
         betrayalUnlocked = 1;
 
         printf("============================================\n");
-        printf("          SECRET PATH UNLOCKED\n");
+        printf("          SECRET PATH UNLOCKED              \n");
         printf("============================================\n\n");
 
         printf("SOMETHING FEELS DIFFERENT THIS TIME...\n\n");
