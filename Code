@@ -100,7 +100,9 @@ void choice1() {
 	char choice;
 
 	clearScreen();
-
+    
+    printf("YOU ENTERED THE PORTAL IT IS DARK.\n\n");
+    
 	printf("BASED ON THE DUNGEON'S INFORMATION,\n");
 	printf("BECAUSE THERE ARE LIGHT CRYSTALS ON THE WALLS,\n");
 	printf("THERE'S NO REAL NEED FOR TORCHES.\n\n");
@@ -129,11 +131,20 @@ void choice1() {
 		clearScreen();
 
 		printf("YOU TAKE THE LEFT PATH.\n\n");
-		printf("YOU SUDDENLY REALIZE THAT YOU HAVE ENTERED\n");
+		
+		printf("NOTHING, BUT A LONG HALLWAY.\n\n");
+
+		printf("YOU EXPLORE DEEPER.\n\n");
+		
+		printf("YOU ENTERED A CHAMBER.\n\n");
+
+		printf("YOU THEN REALIZE THAT THE CHAMBER IS\n");
 		printf("A GOBLIN NEST.\n\n");
 
 		printf("THE GOBLINS SURROUND YOU.\n");
 		printf("THERE ARE TOO MANY OF THEM.\n\n");
+		
+		pauseGame();
 
 		deathEnding();
 	}
@@ -145,8 +156,10 @@ void choice1() {
 		printf("YOU TAKE THE RIGHT PATH.\n\n");
 
 		printf("A SINGLE GOBLIN SUDDENLY APPEARS!\n\n");
-
-		printf("YOU QUICKLY DEFEAT IT.\n\n");
+		
+		printf("IT IS ALONE.\n\n");
+		
+		printf("YOU EASILY DEFEAT IT.\n\n");
 
 		printf("YOU CONTINUE DEEPER INTO THE DUNGEON...\n");
 
@@ -180,8 +193,8 @@ void choice2() {
 
 	printf("THE DUNGEON IS BECOMING DARKER.\n\n");
 
-	printf("A. CONTINUE FORWARD DESPITE THE DARKNESS\n");
-	printf("B. SEARCH FOR ANOTHER SOURCE OF LIGHT\n\n");
+	printf("A. CONTINUE FORWARD\n");
+	printf("B. SEARCH FOR A SOURCE OF LIGHT\n\n");
 
 	printf("CHOICE: ");
 	scanf(" %c", &choice);
@@ -228,17 +241,24 @@ void routeA() {
     
 	redScreen();
 
-	printf("YOU STEPPED ON A SPIKE TRAP!\n\n");
+	printf("YOU STEPPED ON A GOBLIN TRAP!\n\n");
 
 	printf("YOUR LEG IS INJURED AND BEGINS BLEEDING.\n\n");
-	printf("THE SPIKE IS POISONED AND MAKES YOUR LEG WEAK.\n\n");
-	printf("LUCKILY, IT ONLY PARALYSED YOUR LEG, BUT IT IS\n");
-	printf("STILL DIFFICULT TO MOVE.");
+	
+	printf("THE TRAP IS POISONED AND MAKES YOUR LEG WEAK.\n\n");
+	
+	printf("LUCKILY, IT ONLY PARALYSED YOUR FOOT, BUT IT MAKES\n");
+	printf("IT DIFFICULT TO MOVE.");
 	printf("\033[0m\n");
+
+	printf("YOU ARE UNSURE IF THE GOBLIN THAT LAID THE TRAP,\n");
+	printf("IS WAITING SOMEWHERE IN THE AREA.\n\n");
 
 	pauseGame();
 
 	clearScreen();
+
+	printf("NO POINT ON STAYING.\n\n");
 
 	printf("YOU CONTINUE MOVING DEEPER INTO THE DUNGEON.\n\n");
 
@@ -269,7 +289,8 @@ void routeA() {
 	printf("A GOBLIN IS STANDING IN THE DARKNESS.\n");
 	printf("IT KEEPS ITS DISTANCE FROM YOU.\n\n");
 
-	printf("IT SEEMS TO BE WAITING FOR YOU TO BECOME WEAKER.\n");
+	printf("IT WILL WAIT FOR YOU TO LOSE STRENGTH\n");
+	printf("WHILE WAITING IN THE DARKNESS\n");
 
 	pauseGame();
 
@@ -286,8 +307,13 @@ void choice3A() {
 	clearScreen();
 
 	printf("YOU BEGIN MOVING AGAIN.\n\n");
+	
+	printf("THE POISON IS SPREADING\n\n");
+	
+	printf("YOUR RIGHT LEG FOOT HAS GONE NUMB.\n\n");
+	
 
-	printf("THE GOBLIN'S FOOTSTEPS SLOWLY GET CLOSER.\n\n");
+	printf("THE GOBLIN'S FOOTSTEPS SLOWLY GETS CLOSER.\n\n");
 
 	printf("A. STAND GUARD\n");
 	printf("B. KEEP MOVING FORWARD\n\n");
@@ -302,8 +328,11 @@ void choice3A() {
 		printf("YOU STOP AND STAND GUARD.\n\n");
 
 		printf("THE GOBLIN STEPS BACK AND LAUGHED.\n\n");
+		
+		printf("IT'S REJOICING AS ITS PREY IS BLEEDING\n");
+		printf("AWAY AND DYING.\n\n");
 
-		printf("IT IS NO LONGER TRYING TO HIDE ITSELF.\n");
+		printf("IT IS NOT EVEN TRYING TO HIDE ITSELF NOW.\n");
 
 		pauseGame();
 
@@ -322,6 +351,8 @@ void choice3A() {
 
 		printf("YOU ARE TOO WEAK TO DEFEND YOURSELF.");
 		printf("\033[0m\n");
+		
+		pauseGame();
 
 		deathEnding();
 	}
@@ -329,6 +360,7 @@ void choice3A() {
 	else {
 
 		printf("\nINVALID CHOICE.\n");
+		
 		pauseGame();
 
 		choice3A();
@@ -364,6 +396,7 @@ void choice4A() {
 		clearScreen();
 
 		printf("YOU DECIDED TO STAND YOUR GROUND.\n\n");
+		
 		redScreen();
 
 		printf("BUT YOUR LEGS SUDDENLY COLLAPSE.\n\n");
@@ -371,8 +404,10 @@ void choice4A() {
 		printf("UNABLE TO PREPARE.\n\n");
 
 		printf("THE GOBLIN TAKES THE OPPORTUNITY TO ATTACK.\n");
-
 		printf("\033[0m\n");
+		
+		pauseGame();
+		
 		deathEnding();
 	}
 
@@ -384,8 +419,9 @@ void choice4A() {
         
         printf("YOUR LEG BECOMES EVEN WEAKER.\n");
         
-        printf("YOU STUMBLE AND FALL.\n\n");
+        printf("YOU STUMBLE AND COLLAPSE.\n\n");
 		printf("\033[0m\n");
+		
 		pauseGame();
 
 		choice5A();
@@ -394,6 +430,7 @@ void choice4A() {
 	else {
 
 		printf("\nINVALID CHOICE.\n");
+		
 		pauseGame();
 
 		choice4A();
@@ -428,6 +465,8 @@ void choice5A() {
 		printf("YOU ARE TO WEAK TO DEFEND YOURSELF.\n");
 		printf("\033[0m\n");
 		
+		pauseGame();
+		
 		deathEnding();
 	}
 
@@ -452,6 +491,7 @@ void choice5A() {
 	else {
 
 		printf("\nINVALID CHOICE.\n");
+		
 		pauseGame();
 
 		choice5A();
@@ -493,6 +533,8 @@ void choice6A() {
 		printf("THE GOBLIN REACTED AND QUICKLY EVADES YOUR ATTACK.\n");
 		printf("IT COUNTERS BEFORE YOU CAN REACT.\n\n");
 		printf("\033[0m\n");
+		
+		pauseGame();
 
 		deathEnding();
 	}
@@ -500,6 +542,7 @@ void choice6A() {
 	else {
 
 		printf("\nINVALID CHOICE.\n");
+		
 		pauseGame();
 
 		choice6A();
@@ -538,6 +581,8 @@ void choice7A() {
 
 		printf("YOU ARE TOO WEAK TO REACT.");
 		printf("\033[0m\n");
+		
+		pauseGame();
 
 		deathEnding();
 	}
@@ -550,7 +595,9 @@ void choice7A() {
 
         printf("YOU THEN GRAB IT!\n\n");
 
-        printf("YOU TAKE THE GOBLIN TO THE GROUND.\n");
+        printf("YOU TAKE THE GOBLIN TO THE GROUND.\n\n");
+        
+        printf("YOU BEAT IT UP TO DEATH.\n");
 
         printf("AFTER A STRUGGLE, YOU DEFEAT IT.\n\n");
 
@@ -636,12 +683,12 @@ void routeB() {
 	clearScreen();
 
 	printf("============================================\n");
-	printf("          ROUTE B: LIGHT CRYSTAL ROUTE\n");
+	printf("          ROUTE B: LIGHT CRYSTAL ROUTE      \n");
 	printf("============================================\n\n");
 
-	printf("YOU SEARCH FOR ANOTHER SOURCE OF LIGHT.\n\n");
+	printf("YOU SEARCH FOR A SOURCE OF LIGHT.\n\n");
 
-	printf("YOU FIND A LIGHT CRYSTAL ATTACHED TO THE\n");
+	printf("YOU TOOK A LIGHT CRYSTAL ATTACHED TO THE\n");
 	printf("CAVE WALL.\n\n");
 
 	printf("YOU BREAK THE CRYSTAL OFF AND CARRY IT\n");
@@ -660,7 +707,7 @@ void routeB() {
 	printf("YOU CONTINUE MOVING.\n\n");
 
 	printf("WITH THE CRYSTAL'S LIGHT, YOU NOTICE SEVERAL\n");
-	printf("TRAPS AND EASILY AVOID THEM.\n\n");
+	printf("TRAPS AND EASILY AVOIDS THEM.\n\n");
 
 	printf("EVENTUALLY, YOU REACH TWO PATHS.\n");
 
@@ -700,12 +747,16 @@ void choice3B() {
 		printf("YOU FOLLOW THE SOUNDS.\n\n");
 
 		printf("YOU DISCOVER A GROUP OF ADVENTURERS.\n\n");
+		
+		printf("THEY SEEM TO PREPARING TO DELVE DEEPER.\n\n");
 
 		printf("YOU APPROACH THEM AND ASK IF YOU CAN JOIN.\n\n");
+		
+		printf("AFTER THEIR BRIEF DISCUSSION.\n\n");
 
 		printf("THEY AGREE TO LET YOU JOIN THEIR GROUP.\n\n");
 
-		printf("YOU TRAVEL AND FIGHT ALONGSIDE THEM.\n\n");
+		printf("YOU THEN EXPLORE DEEPER AND FIGHTED ALONGSIDE THEM.\n\n");
 
 		printf("HOWEVER, THE GROUP NOTICES HOW WEAK YOU ARE.\n\n");
 
@@ -726,6 +777,7 @@ void choice3B() {
 	else {
 
 		printf("\nINVALID CHOICE.\n");
+		
 		pauseGame();
 
 		choice3B();
@@ -827,6 +879,9 @@ void deathEnding() {
 	printf("                YOU DIED                    \n");
 	printf("============================================\n\n");
 	printf("\033[0m");
+	
+	printf("UNABLE TO DEFEND YOURSELF.\n\n");
+
 	printf("YOUR ADVENTURE HAS COME TO AN END.\n");
 
 	restartGame();
@@ -872,12 +927,19 @@ void struggleEnding() {
 
 	printf("YOU DISCOVER A GROUP OF ADVENTURERS.\n\n");
 
-	printf("THEY FIND YOU BADLY INJURED AND HELP YOU.\n\n");
+	printf("THEY FIND YOU BADLY INJURED, THEY PITY AND HELP YOU.\n\n");
 
-	printf("YOU SURVIVED...\n\n");
+	printf("YOU SURVIVED.\n\n");
 
-	printf("BUT YOUR ADVENTURE HAS LEFT YOU WEAK,\n");
-	printf("AND RECOVERY WILL NOT BE EASY.\n");
+	printf("YOUR ADVENTURE WAS FULL OF STRUGGLES,\n");
+    printf("DESPITE THE PAIN, THE DARKNESS, AND YOUR WEAKENED BODY, \n");
+    printf("YOU REFUSED TO GIVE UP.\n\n");
+
+    printf("YOU MAY NOT HAVE LEFT THE DUNGEON UNHURT,\n");
+    printf("BUT YOU PROVED THAT YOU HAD THE WILL TO SURVIVE.\n\n");
+
+    printf("\nYOU SURVIVED THE DUNGEON.\n");
+    printf("AND YOUR JOURNEY IS FAR FROM OVER.\n");
 
 	restartGame();
 }
